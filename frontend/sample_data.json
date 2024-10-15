@@ -1,0 +1,301 @@
+{
+  "carpools": [
+    {
+      "from": "Aulnay-sous-bois",
+      "to": "Monaco",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "25.91",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "rseabury",
+        "name": "Rene Seabury"
+      }
+    },
+    {
+      "from": "Aulnay-sous-bois",
+      "to": "Aulnay-sous-bois",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "7.96",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "joldman",
+        "name": "Jamie Oldman"
+      }
+    },
+    {
+      "from": "Paris",
+      "to": "Macôn",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "8.38",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "jfennell",
+        "name": "Jetta Fennell"
+      }
+    },
+    {
+      "from": "Bordeaux",
+      "to": "Les Sables d&#x27;Olonne",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "3.31",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "cleath",
+        "name": "Craig Leath"
+      }
+    },
+    {
+      "from": "Troyes",
+      "to": "Grenoble",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "12.55",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "rrohloff",
+        "name": "Rufus Rohloff"
+      }
+    },
+    {
+      "from": "Grenoble",
+      "to": "Nantes",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "20.72",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "adurrett",
+        "name": "Aiden Durrett"
+      }
+    },
+    {
+      "from": "Marseille",
+      "to": "Lille",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "5.08",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "tcarroll",
+        "name": "Theo Carroll"
+      }
+    },
+    {
+      "from": "Lille",
+      "to": "Villeurbanne",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "13.16",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "kbrandt",
+        "name": "Kathy Brandt"
+      }
+    },
+    {
+      "from": "Les Sables d&#x27;Olonne",
+      "to": "Bordeaux",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "12.200000000000001",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "rwhitson",
+        "name": "Rosie Whitson"
+      }
+    },
+    {
+      "from": "Nantes",
+      "to": "Les Sables d&#x27;Olonne",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "13.25",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "aremus",
+        "name": "Austin Remus"
+      }
+    },
+    {
+      "from": "Nantes",
+      "to": "Bordeaux",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "24.080000000000002",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "akilmer",
+        "name": "Anton Kilmer"
+      }
+    },
+    {
+      "from": "Monaco",
+      "to": "Macôn",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "13.68",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "bfurlough",
+        "name": "Benito Furlough"
+      }
+    },
+    {
+      "from": "Monaco",
+      "to": "Reims",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "12.73",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "mgrieve",
+        "name": "Mitch Grieve"
+      }
+    },
+    {
+      "from": "Marseille",
+      "to": "Villeurbanne",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "20.94",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "iwoodrum",
+        "name": "Ian Woodrum"
+      }
+    },
+    {
+      "from": "Cannes",
+      "to": "Paris",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "8.74",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "rhancock",
+        "name": "Richelle Hancock"
+      }
+    },
+    {
+      "from": "Marseille",
+      "to": "Cannes",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "9.700000000000001",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "dneal",
+        "name": "Drew Neal"
+      }
+    },
+    {
+      "from": "Villeurbanne",
+      "to": "Reims",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "8.14",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "bhyder",
+        "name": "Brian Hyder"
+      }
+    },
+    {
+      "from": "Paris",
+      "to": "Macôn",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "25.09",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "rseal",
+        "name": "Russell Seal"
+      }
+    },
+    {
+      "from": "Troyes",
+      "to": "Troyes",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "14.34",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "obrandt",
+        "name": "Olivia Brandt"
+      }
+    },
+    {
+      "from": "Lille",
+      "to": "Monaco",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "26.060000000000002",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "iporras",
+        "name": "Ivan Porras"
+      }
+    },
+    {
+      "from": "Lille",
+      "to": "Lyon",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "10.4",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "ibradbury",
+        "name": "Ivan Bradbury"
+      }
+    },
+    {
+      "from": "Macôn",
+      "to": "Nice",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "4.3100000000000005",
+      "availableSpots": "1",
+      "carpooler": {
+        "username": "imercer",
+        "name": "Ian Mercer"
+      }
+    },
+    {
+      "from": "Nice",
+      "to": "Cannes",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "9.81",
+      "availableSpots": "2",
+      "carpooler": {
+        "username": "icarter",
+        "name": "Isabelle Carter"
+      }
+    },
+    {
+      "from": "Reims",
+      "to": "Macôn",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "2.37",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "aoldman",
+        "name": "Andy Oldman"
+      }
+    },
+    {
+      "from": "Troyes",
+      "to": "Grenoble",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "24.77",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "jwhitson",
+        "name": "Jocelyn Whitson"
+      }
+    },
+    {
+      "from": "Reims",
+      "to": "Grenoble",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "3.7600000000000002",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "fgamble",
+        "name": "Florance Gamble"
+      }
+    },
+    {
+      "from": "Aulnay-sous-bois",
+      "to": "Reims",
+      "date": "2024-04-13T08:30:00Z",
+      "price": "29.59",
+      "availableSpots": "3",
+      "carpooler": {
+        "username": "tsmit",
+        "name": "Travis Smit"
+      }
+    }
+  ]
+}
