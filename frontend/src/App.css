@@ -1,4 +1,33 @@
+:root {
+  font:
+    1rem "Georgia",
+    serif;
+
+  /* Custom properties */
+  --background-color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+#root {
+  background-color: --var(--background-color);
+}
+
+.header {
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-title {
+  flex: 1;
+  font-size: 3rem;
+}
+
+.logo {
+  height: 64px;
+  width: 64px;
 }
