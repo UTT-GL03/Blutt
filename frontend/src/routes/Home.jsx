@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../styles/Home.css";
 import Header from "../components/Header.jsx";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <div className="accueil_client">
+      <div className="home-container">
         <h2>Selectionnez votre trajet:</h2>
         <form className="form_client">
           <label htmlFor="destination1">De:</label>
@@ -18,14 +18,16 @@ export default function Home() {
           <br></br>
         </form>
         <Link to="carpool-search">
-          <button type="submit">Search</button>
+          <button className="button" type="submit">Search</button>
           <br></br>
         </Link>
       </div>
-      <button type="button" className="switchbutton">
+      <Link to="carpooler-home">
+      <button type="button" className="button">
         Switch profile
       </button>
       <br></br>
+      </Link>
     </>
   );
 }

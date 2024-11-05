@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
 }
-
+/*
 .accueil_client {
   width: 70%;
   text-align: center;
@@ -44,7 +44,7 @@ button {
   margin: 0 auto;
   margin-bottom: 5em;
   padding:1em 0;
-  border-radius: 6px; */
+  border-radius: 6px; 
   cursor: pointer;
   font-weight: bolder;
 }
@@ -57,4 +57,81 @@ h2 {
 .switchbutton {
   width: 25%;
   margin: 5em;
+}
+
+.accueil_conducteur{
+  width:70%;
+  text-align:center;
+  background-color: #95c590;
+  margin: auto;
+  
+  border-radius: 32px;
+  
+  
+}
+.form_conducteur{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20em 1em;
+}
+*/
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+:root {
+  --button-font-size: 1rem;
+  --button-vertical-padding: 0.5rem;
+  --button-horizontal-padding: 1rem;
+}
+.button {
+  margin-left: 2rem;
+  background-color: green;
+  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+  font-size: var(--button-font-size);
+  border: none;
+  border-radius: calc(
+    var(--button-font-size) + 2 * var(--button-vertical-padding)
+  );
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.home-container {
+  margin: 2rem;
+  border-radius: 2rem;
+  flex: 1;
+  background-color: var(--accent-background);
+  text-align: center;
+ 
+  border-radius: 32px;
+}
+h2 {
+  font-size: 2em;
+  padding-top: 1em;
+}
+
+label {
+  width: 50%;
+  padding: 0.5rem;
+  margin: 1em 0;
+  justify-content: left;
+  text-align: right;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1em 0;
+  border-radius:0.5rem;
+}
+
+.form_client {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 7em 1em;
 }

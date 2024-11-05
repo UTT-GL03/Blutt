@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import Home from "./routes/Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarpoolSearch from "./routes/CarpoolSearch.jsx";
+import CarpoolerHome from "./routes/CarpoolerHome.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "carpool-search",
     element: <CarpoolSearch />,
+  },
+  {
+    path: "carpooler-home",
+    element: <CarpoolerHome />,
   },
 ]);
 
