@@ -17,6 +17,7 @@ export default function App() {
     </form>
     <button type="submit">Search</button><br></br>
     </div>
+    <button type="button" class="switchbutton">Switch profile</button><br></br>
     </>
   );
 }
