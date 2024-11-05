@@ -77,3 +77,8 @@ h2{
   font-size: 2em;
   padding-top: 1em;
 }
+
+.switchbutton{
+  width:25%;
+  margin:5em;
+}
