@@ -1,4 +1,4 @@
-- name: La roue verte
+- name: La roue verte (Passager)
   url: https://www.laroueverte.com
   actions:
     - name: Remplir l'addresse de départ pour un covoiturage
@@ -21,8 +21,8 @@
       timeoutBefore: 10000
       element: "#autres_annonces-list > div.annonceItem.annonceItemReg.displayed.selected > div.ficheInfo.col80 > div > a"
 
-- name: Mobicoop
-  url: https://www.mobicoop.fr/
+- name: Mobicoop (Passager)
+  url: https://www.mobicoop.fr
   actions:
     - name: Supprimer le popup concernant la prime de covoiturage
       type: click
@@ -66,3 +66,80 @@
       element: "#carpools > div > div > div:nth-child(1) > div > div > div > div > div.col.col-10 > div:nth-child(3) > div.row.row--dense.align-center > div.text-right.col-lg-3.col-2 > button"
       timeoutBefore: 60000
       screenshot: example.png
+
+- name: La roue verte (Conducteur)
+  url: https://www.laroueverte.com
+  actions:
+    - name: Accepter les cookies
+      type: click
+      element: "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"
+
+    - name: Cliquer sur le bouton "Se connecter"
+      type: click
+      element: "#nav-header > li > a"
+      pageChange: true
+
+    - name: Entrer le nom d'utilisateur
+      type: text
+      element: "#j_username"
+      ###########################################
+      # /!\/!\/!\ DO NOT COMMIT THIS VALUE !!!!!!
+      ###########################################
+      content: "XXX"
+
+    - name: Entrer le mot de passe
+      type: text
+      element: "#j_password"
+      ###########################################
+      # /!\/!\/!\ DO NOT COMMIT THIS VALUE !!!!!!
+      ###########################################
+      content: "XXX"
+
+    - name: Cliquer sur le bouton se connecter
+      type: click
+      element: "#identificationForm > div > div.submitWrap > input"
+      pageChange: true
+
+- name: Mobicoop (Conducteur)
+  url: https://www.mobicoop.fr
+  actions:
+    - name: Remplir l'addresse de départ pour un covoiturage
+      type: text
+      element: "#startFullAddress"
+      content: "Troyes"
+
+    - name: Remplir l'addresse d'arrivée pour un covoiturage
+      type: text
+      element: "#endFullAddress"
+      content: "Paris"
+
+    - name: Lancer la recherche de covoiturage
+      type: click
+      element: "#app > div.v-application--wrap > div > header > div > div.v-toolbar__items.hidden-md-and-down > a:nth-child(2)"
+      pageChange: true
+
+    - name: Entrer le nom d'utilisateur
+      type: text
+      element: "#email"
+      ###########################################
+      # /!\/!\/!\ DO NOT COMMIT THIS VALUE !!!!!!
+      ###########################################
+      content: "XXX"
+
+    - name: Remplir l'addresse d'arrivée pour un covoiturage
+      type: text
+      element: "#password"
+      ###########################################
+      # /!\/!\/!\ DO NOT COMMIT THIS VALUE !!!!!!
+      ###########################################
+      content: "XXX"
+
+    - name: Envoyer les informations de connexion
+      type: click
+      element: "#formLogin > button"
+      pageChange: true
+
+    - name: Cliquer sur la première annonce
+      type: click
+      element: "XXX"
+      pageChange: true
