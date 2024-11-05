@@ -1,68 +1,73 @@
-- name: La roue verte
+# - name: La roue verte (Passager)
+#   url: https://www.laroueverte.com
+#   actions:
+#     - name: Remplir l'addresse de départ pour un covoiturage
+#       type: text
+#       element: "#startFullAddress"
+#       content: "Troyes"
+#
+#     - name: Remplir l'addresse d'arrivée pour un covoiturage
+#       type: text
+#       element: "#endFullAddress"
+#       content: "Paris"
+#
+#     - name: Lancer la recherche de covoiturage
+#       type: click
+#       pageChange: true
+#       element: "#submitSearch"
+#
+#     - name: Cliquer sur la première annonce
+#       type: click
+#       timeoutBefore: 10000
+#       element: "#autres_annonces-list > div.annonceItem.annonceItemReg.displayed.selected > div.ficheInfo.col80 > div > a"
+#
+# - name: Mobicoop (Passager)
+#   url: https://www.mobicoop.fr
+#   actions:
+#     - name: Supprimer le popup concernant la prime de covoiturage
+#       type: click
+#       element: "#app > div.v-dialog__content.v-dialog__content--active > div > div > div > div > div.px-10.pb-10.col.col-7 > p.d-flex.flex-row-reverse > button"
+#
+#     - name: Remplir l'addresse de départ pour un covoiturage
+#       type: text
+#       element: "#input-47"
+#       content: "Troyes"
+#
+#     - name: Sélectionner Troyes dans la liste déroulante
+#       type: click
+#       timeoutBefore: 5000
+#       element: "#list-47 > div:nth-child(3)"
+#
+#     - name: Remplir l'addresse d'arrivée pour un covoiturage
+#       type: text
+#       element: "#input-60"
+#       content: "Paris"
+#
+#     - name: Sélectionner Paris dans la liste déroulante
+#       type: click
+#       timeoutBefore: 5000
+#       element: "#list-60 > div:nth-child(3)"
+#
+#     - name: Cliquer sur le sélecteur de date
+#       type: click
+#       element: "#date"
+#
+#     - name: Sélectionner la date de départ
+#       type: click
+#       element: "#app > div.v-menu__content.theme--light.menuable__content__active > div > div > div > div.v-date-picker-table.v-date-picker-table--date.theme--light > table > tbody > tr:nth-child(2) > td:nth-child(3) > button"
+#
+#     - name: Lancer la recherche de covoiturage
+#       type: click
+#       element: "#app > div.v-application--wrap > main > div > div > div.row.mt-5.mt-md-n16.pt-md-16.mt-lg-16.pt-lg-16.justify-center > div > div > div:nth-child(2) > div > div > div:nth-child(2) > button"
+#       pageChange: true
+#
+#     - name: Cliquer sur la première annonce
+#       type: click
+#       element: "#carpools > div > div > div:nth-child(1) > div > div > div > div > div.col.col-10 > div:nth-child(3) > div.row.row--dense.align-center > div.text-right.col-lg-3.col-2 > button"
+#       timeoutBefore: 60000
+#       screenshot: example.png
+
+- name: La roue verte (Conducteur)
   url: https://www.laroueverte.com
   actions:
-    - name: Remplir l'addresse de départ pour un covoiturage
-      type: text
-      element: "#startFullAddress"
-      content: "Troyes"
-
-    - name: Remplir l'addresse d'arrivée pour un covoiturage
-      type: text
-      element: "#endFullAddress"
-      content: "Paris"
-
-    - name: Lancer la recherche de covoiturage
-      type: click
-      pageChange: true
-      element: "#submitSearch"
-
-    - name: Cliquer sur la première annonce
-      type: click
-      timeoutBefore: 10000
-      element: "#autres_annonces-list > div.annonceItem.annonceItemReg.displayed.selected > div.ficheInfo.col80 > div > a"
-
-- name: Mobicoop
-  url: https://www.mobicoop.fr/
-  actions:
-    - name: Supprimer le popup concernant la prime de covoiturage
-      type: click
-      element: "#app > div.v-dialog__content.v-dialog__content--active > div > div > div > div > div.px-10.pb-10.col.col-7 > p.d-flex.flex-row-reverse > button"
-
-    - name: Remplir l'addresse de départ pour un covoiturage
-      type: text
-      element: "#input-47"
-      content: "Troyes"
-
-    - name: Sélectionner Troyes dans la liste déroulante
-      type: click
-      timeoutBefore: 5000
-      element: "#list-47 > div:nth-child(3)"
-
-    - name: Remplir l'addresse d'arrivée pour un covoiturage
-      type: text
-      element: "#input-60"
-      content: "Paris"
-
-    - name: Sélectionner Paris dans la liste déroulante
-      type: click
-      timeoutBefore: 5000
-      element: "#list-60 > div:nth-child(3)"
-
-    - name: Cliquer sur le sélecteur de date
-      type: click
-      element: "#date"
-
-    - name: Sélectionner la date de départ
-      type: click
-      element: "#app > div.v-menu__content.theme--light.menuable__content__active > div > div > div > div.v-date-picker-table.v-date-picker-table--date.theme--light > table > tbody > tr:nth-child(2) > td:nth-child(3) > button"
-
-    - name: Lancer la recherche de covoiturage
-      type: click
-      element: "#app > div.v-application--wrap > main > div > div > div.row.mt-5.mt-md-n16.pt-md-16.mt-lg-16.pt-lg-16.justify-center > div > div > div:nth-child(2) > div > div > div:nth-child(2) > button"
-      pageChange: true
-
-    - name: Cliquer sur la première annonce
-      type: click
-      element: "#carpools > div > div > div:nth-child(1) > div > div > div > div > div.col.col-10 > div:nth-child(3) > div.row.row--dense.align-center > div.text-right.col-lg-3.col-2 > button"
-      timeoutBefore: 60000
-      screenshot: example.png
+    - name: bonjour

@@ -1,45 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Header from "./Header";
 
-function Counter(){
-  const [count, setCount] = useState(0)
-
-  return(
-    <><button onClick={() => setCount((count) => count + 1)}>
-    count is {count}
-    </button>
-    </>
-  );
-
-}
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Counter/>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <div className="accueil_client">
+      <h2>Selectionnez votre trajet:</h2>
+      <form className="form_client">
+      <label for="destination1">De:</label> 
+      <input type="text" name="destination1" id="destination1" /> 
+      <label for="destination2">A:</label> 
+      <input type="text" name="destination2" id="destination2" /> 
+      <label for="destination2">Date:</label> 
+      <input type="date" id="date" name="date"/><br></br>
+    </form>
+    <button type="submit">Search</button><br></br>
+    </div>
+    <button type="button" class="switchbutton">Switch profile</button><br></br>
     </>
-  )
+  );
 }
-
-export default App
