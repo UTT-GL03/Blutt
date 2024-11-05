@@ -5,6 +5,7 @@
 
   /* Custom properties */
   --background-color: white;
+  --accent-background: #95c590;
 }
 
 * {
@@ -12,73 +13,48 @@
   padding: 0;
 }
 
-#root {
-  background-color: --var(--background-color);
-}
-
-.header {
-  padding: 2em;
-  display: flex;
-  flex-direction: row;
-}
-
-.header-title {
-  flex: 1;
-  font-size: 3rem;
-}
-
-.logo {
-  height: 64px;
-  width: 64px;
-}
-
-.accueil_client{
-  width:70%;
-  text-align:center;
+.accueil_client {
+  width: 70%;
+  text-align: center;
   background-color: #95c590;
   margin: auto;
-  
+
   border-radius: 32px;
-  
-  
 }
-.form_client{
-  display:flex;
+.form_client {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 7em 1em;
 }
-label{
+label {
   width: 50%;
   padding: 0;
   margin: 1em 0;
   justify-content: left;
-  
 }
-input{
+input {
   width: 100%;
-  padding:0;
-  margin:1em 0;
-  
+  padding: 0;
+  margin: 1em 0;
 }
 
-button{
-  width:60%;
+button {
+  /* width:60%;
   margin: 0 auto;
   margin-bottom: 5em;
   padding:1em 0;
-  border-radius: 6px;
+  border-radius: 6px; */
   cursor: pointer;
   font-weight: bolder;
 }
 
-
-h2{
+h2 {
   font-size: 2em;
   padding-top: 1em;
 }
 
-.switchbutton{
-  width:25%;
-  margin:5em;
+.switchbutton {
+  width: 25%;
+  margin: 5em;
 }
