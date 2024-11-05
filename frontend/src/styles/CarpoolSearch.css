@@ -15,15 +15,58 @@
   background-color: green;
   padding: var(--button-vertical-padding) var(--button-horizontal-padding);
   font-size: var(--button-font-size);
-  border: none;
   border-radius: calc(
     var(--button-font-size) + 2 * var(--button-vertical-padding)
   );
 }
 
 .carpool-container {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 1rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
   border-radius: 2rem;
   flex: 1;
   background-color: var(--accent-background);
+}
+
+.carpool-entry-container {
+  background-color: #d1ebce;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.carpool-info-container {
+  display: flex;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: column;
+}
+
+.book-button {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.price {
+  text-align: center;
+  align-self: center;
+  font-weight: bolder;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: green;
 }
