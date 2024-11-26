@@ -1,0 +1,7 @@
+baseURL: http://localhost:8091
+projectName: Blutt
+scenarios:
+  - path: ./benchmark/scenario1.js
+    name: Rechercher un covoiturage
+  - path: ./benchmark/scenario2.js
+    name: Créer un covoiturage
