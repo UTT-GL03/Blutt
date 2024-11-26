@@ -18,9 +18,12 @@
             var(--button-font-size) + 2 * var(--button-vertical-padding)
     );
     border: none;
-    margin: 0 auto 1rem;
     cursor: pointer;
     font-weight: bolder;
+}
+
+.button:disabled {
+    background-color: lightgrey;
 }
 
 .home-container {
