@@ -5,3 +5,6 @@ scenarios:
     name: Rechercher un covoiturage
   - path: ./benchmark/scenario2.js
     name: Créer un covoiturage
+containers:
+  - blutt-backend-1
+  - blutt-static_hosting-1
