@@ -1,17 +1,17 @@
 :root {
-  font:
-    1rem "Georgia",
+    font: 1rem "Georgia",
     serif;
 
-  /* Custom properties */
-  --background-color: white;
-  --accent-background: #95c590;
+    /* Custom properties */
+    --background-color: white;
+    --accent-background: #95c590;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 /*
 .accueil_client {
   width: 70%;
@@ -67,62 +67,59 @@ h2 {
   padding: 20em 1em;
 }
 */
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-:root {
-  --button-font-size: 1rem;
-  --button-vertical-padding: 0.5rem;
-  --button-horizontal-padding: 1rem;
-}
-.button {
-  margin-left: 2rem;
-  background-color: green;
-  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
-  font-size: var(--button-font-size);
-  border: none;
-  border-radius: calc(
-    var(--button-font-size) + 2 * var(--button-vertical-padding)
-  );
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  font-weight: bolder;
+
+#root {
+    padding: 0 2rem;
 }
 
-.home-container {
-  margin: 2rem;
-  border-radius: 2rem;
-  flex: 1;
-  background-color: var(--accent-background);
-  text-align: center;
- 
-  border-radius: 32px;
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+:root {
+    --button-font-size: 1rem;
+    --button-vertical-padding: 0.5rem;
+    --button-horizontal-padding: 1rem;
+}
+
+.button {
+    background-color: green;
+    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+    font-size: var(--button-font-size);
+    border: none;
+    border-radius: calc(
+            var(--button-font-size) + 2 * var(--button-vertical-padding)
+    );
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
 h2 {
-  font-size: 2em;
-  padding-top: 1em;
+    font-size: 2em;
+    padding-top: 1em;
 }
 
 label {
-  width: 50%;
-  padding: 0.5rem;
-  margin: 1em 0;
-  justify-content: left;
-  text-align: right;
+    width: 50%;
+    padding: 0.5rem;
+    margin: 1em 0;
+    justify-content: left;
+    text-align: right;
 }
+
 input {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 1em 0;
-  border-radius:0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1em 0;
+    border-radius: 0.5rem;
 }
 
 .form_client {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 7em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 8em 1em;
 }

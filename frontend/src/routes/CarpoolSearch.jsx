@@ -14,7 +14,7 @@ export default function CarpoolSearch() {
         </button>
       </Link>
       <div className="carpool-container">
-        {data.carpools.map((carpool) => (
+        {data.docs.map((carpool) => (
           <CarpoolEntry carpool={carpool} />
         ))}
       </div>

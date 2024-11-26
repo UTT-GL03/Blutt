@@ -7,7 +7,7 @@ export default function CarpoolEntry({ carpool }) {
 
   return (
     <div className="carpool-entry-container">
-      <div className="price">{carpool.price}€</div>
+      <div className="price">{parseFloat(carpool.price).toFixed(2)}€</div>
       <div className="carpool-info-container">
         <div className="name">{carpool.carpooler.name}</div>
         <div>
