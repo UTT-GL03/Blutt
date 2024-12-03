@@ -153,3 +153,17 @@ Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de
 
 ![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
 **Fig.6** : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
+
+## Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
+
+Pour la troisième version du prototype, les données sont désormais stockées dans un système de base de données interrogeable à travers une API Web (CouchDB). L'intérêt d'une source de données dynamique est d'une part, à terme, de pouvoir ajouter ou modifier des trajets en covoiturage plus facilement, et d'autre part de déporter sur le serveur le filtrage des données pertinentes (afin de réduire l'impact de notre service pour le client).
+
+Sur ce deuxième enjeu, on n'observe pas de changements significatifs en termes de consommation CPU et utilisation du réseau, cependant ces changements nous permettront dans le futur de faire de grosses économies de CO2 alors que l'application fait face à des quantités plus importantes de données.
+
+![an image of the greenframe interface showing the results for the carpool search of the Blutt website.](/doc/greenframe_blutt_carpool_creation.png)
+**Fig.5** : Consommation de ressources lors de la consultation de la page de création de covoiturage pour le site Blutt.
+
+Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un data center (cf. Fig.6). Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable (+2%, 0.5mg eq. CO2) par rapport à la partie "client" .
+
+![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
+**Fig.6** : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
