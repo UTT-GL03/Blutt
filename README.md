@@ -63,8 +63,12 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de deux s
 Ce sont deux solutions offrant des fonctionnalités similaires et qui ont la particularité de se vouloir des solutions simples et limitées en fonctionnalités contrairement à d'autres solutions plus populaires commme [BlaBlaCar](https://www.blablacar.fr) ou [Karos](https://www.karos.fr).
 
 Ainsi, voici les résultats obtenus:
+<<<<<<< HEAD
 - [Résultats pour les deux scénarios]([benchmark/result.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Blutt/refs/heads/main/benchmark/result.html
 ))
+=======
+- [Résultats pour les deux scénarios](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Blutt/refs/heads/main/benchmark/result.html)
+>>>>>>> 2c8c58f3385d71d490a6993b73d9a9dcf61eba46
 
 ## Maquette de l'interface et échantillon de données
 
