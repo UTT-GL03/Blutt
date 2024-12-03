@@ -111,8 +111,25 @@ __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 ### Page de recherche
 
 Concernant la page de recherche, nous avons ajouté quelques conteneurs contenant des informations sur plusieurs trajets.
-De meme que pour la page d'accueil, nous avons opté pour une implémentation sobre, avec le minimum de fonctionnalités possibles.
-Ainsi, chaque choix comporte le nom, prénom du covoitureur
+De meme que pour la page d'accueil, nous avons opté pour une implémentation sobre, avec le minimum de fonctionnalités possibles en essayant de rester conforme avec la maquette.
+Ainsi, chaque choix comporte le nom, prénom du covoitureur, la date, le nombre de places disponibles ainsi que le prix.
+Nous n'avons pour l'instant pas inclu de filtrage que ce soit au niveau des destinations ou encore du prix, on affiche directement tous les résultats disponibles.
+
+![Prototype de la page de recherche](doc/screenshot_research_client.png)
+__Fig.5__: Prototype de la page de recherche.
+
+Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
+
+|                                             | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
+|---------------------------------------------|----------|-------------|---------------|----------|------------------------|
+| 1. Chargement de la page                    |          |             |               |          |                        |
+| 2. Lancement de la recherche de covoiturage |          |             |               |          |                        |
+
+__Tab.2__: Évaluation de l'impact du scénario "Trpuver un covoiturage" dans le prototype n°1.
+
+<span style="color:red">A remplir</span>
+
+
 
 
 
