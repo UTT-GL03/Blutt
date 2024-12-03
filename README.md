@@ -165,5 +165,49 @@ Sur ce deuxième enjeu, on n'observe pas de changements significatifs en termes 
 
 Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un data center (cf. Fig.6). Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable (+2%, 0.5mg eq. CO2) par rapport à la partie "client" .
 
+![an image of the greenframe interface showing the results for the backend of the v3 prototype of the Blutt website](/doc/greenframe_blutt_prototype3_backend.png)
+**Fig.8** : Profil dans le temps de l'impact de la base de données lors de la consultation de la page de recherche de covoiturage.
+
+De ces différentes mesures, nous pouvons retenir que l'effet de l'introduction d'une base de données, quoique négligeable, est, pour l'instant, plutôt défavorable d'un point de vue écologique. Le bilan de ce changement devrait cependant rapidement s'inverser avec l'augmentation de la quantité de données gérées, comme nous allons le voir avec le prototype n°4.
+
+## Prototype n°4 : Fonctionnalités pour le scénario prioritaire avec filtrage des données
+
+Dans le cas qui nous occupe des covoiturages quotidiens et dans le cadre des fonctionnalités envisagées (recherche de trajet, publication de trajet), l'augmentation de données à traiter est directement liée au nombre d'utilisateurs qui utilisent la plateforme. En effet, un nombre accru d'utilisateurs signifie forcément un nombre proportionnellement accru de trajets publiés, et de recherche de trajets. Admettons que les utilisateurs publient au maximum leurs trajets 2 mois à l'avance, il faut à minima stocker tous les trajets à venir pour toutes les destinations possibles jusqu'à 2 mois plus tard. Pour évaluer ce qui serait une augmementation réaliste des données traitées par l'application dans le meilleur des cas, on prends l'exemple de BlaBlaCar, qui reporte 9 628 311 trajets en 2023 ([BlaBlaCar : bilan 2023 et enjeux 2024 pour le covoiturage courte distance](https://blog.blablacar.fr/daily/covoiturage-courte-distance/)). On peut diviser par 6 pour obtenir 1 604 718 trajets en deux mois. On considère le fait que seulement certains trajets correspondent à la destination et l'horaire choisie par l'utilisateur, et évalue qu'on aura à traiter au maximum 10 000 trajets compatibles pour une seule recherche de covoiturage.
+
+### Évolution de l'impact environnemental avant correction
+
+La figure 9 illustre le passage d'environ 60 covoiturages dans la base de données à environ 10000. On observe :
+
+- une augmentation de 102% de la consommation équivalente totale
+- une augmentation de 523% de la consommation de CPU en backend
+- une augmentation de 1888% (!!!) de la consommation du network pour le navigateur
+
+![an image of the greenframe interface showing the results for the backend AND client of the v4 prototype of the Blutt website](/doc/greenframe_blutt_prototype4_carpool_search.png)
+**Fig. 9** : Évolution de l'impact de la recherche de covoiturage en passant de 60 à 10 000 covoiturages disponibles.
+
+Évidemment, cette évolution ne concerne que la page de recherche car c'est elle qui va charger l'entièreté des trajets depuis la database. On va maintenant essayer de trouver un système permettant de palier à cette augmentation, et essayer de retomber sur les niveaux de consommation que nous observions précédemment.
+
+### Prise en compte du passage à l'échelle
+
+Dans notre cas, il nous est important de tout de même laisser à notre utilisateur la possibilité de consulter l'intégralité des trajets en covoiturage qui correspondent à sa recherche. Notre objectif devrait être de proposer les covoiturages dans un ordre censé (plus pertinent au moins pertinent) en laissant la possibilité à l'utilisateur de consulter de plus en plus de trajets, seulement s'il le désire. Pour ce faire, on se calque sur le modèle de Google Search, en paginant les résultats de la recherche, et en offrant à l'utilisateur de charger des pages additionnelles. À chaque changement de page, on remplace les anciennes entrées par les nouvelles, ce qui signifie que la taille de notre DOM ne dépasse jamais un nombre maximal d'objets dictés par le nombre d'items dans une page. Ici, on choisit 10 items par page.
+
+### Évolution de l'impact environnemental après correction
+
+La stratégie de pagination a eu l'effet escompté. On observe un retour aux niveaux de consommation du prototype v2. L'application est maintenant capable de gérer une quantité infinie de covoiturages sans impact significatif sur le client.
+
+![an image of the greenframe interface showing the consommation graph for the Blutt website](/doc/greenframe_blutt_prototype4_graph.png)
+![an image of the greenframe interface showing the consommation graph for the Blutt website with a tooltip showing the commit message responsible for the decrease in consommation](/doc/greenframe_blutt_prototype4_graph_tooltip.png)
+**Fig. 10** : Évolution de l'impact de l'application avec l'augmentation de la quantité de données puis sa prise en compte.
+
+Mieux qu'un simple retour en l'état, on observe même une légère baisse de la consommation sur le réseau en raison du nombre moindre d'items récupéré sur le chargement initial de la page.
+
+![an image of the greenframe interface showing the results for the backend AND client of the v5 prototype of the Blutt website](/doc/greenframe_blutt_prototype5_carpool_search.png)
+**Fig. 11** : Résultats de l'impact de la page de recherche de covoiturage paginée avec 10000 articles.
+
+### Perspectives
+
+Pour l'instant, il est plus pénible pour l'utilisateur de devoir cliquer manuellement pour charger la prochaine page de covoiturages par rapport à simplement défilier une longue liste d'items pré-chargés. Pour palier à ce problème, il faudrait pouvoir s'assurer que pour la majorité des utilisateurs, le résultat qui les intéresse se trouve sur la première page. Cette fonctionnalité relève plus du côté backend, où un bon système de recommendation avec connaissance d'informations supplémentaires sur l'utilisateur actuel pourrait trier les résultats avant de les envoyer dans la réponse de la requête. Cette fonctionnalité est difficile à implémenter et pourrait représenter un impact environnemental grandement accru côté backend. On choisit donc pour l'instant de se concentrer sur la finalisation des fonctionnalités "core" de l'application, avant de s'attaquer à des fonctionnalités supplémentaires.
+
+Comme précédemment, un arbitrage sera réalisé pour chacune de ces "core" fonctionnalités pour tenir compte à la fois de leur utilité sociale et de leur impact environnemental.
 ![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
 **Fig.6** : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
