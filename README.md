@@ -78,3 +78,42 @@ Concernant les maquettes, nous avons modélisé 4 pages:
    ![Recherches client](doc/client_research.png)
 4. La page de confirmation vue par le conducteur
    ![Confirmation conducteur](doc/carpooler_confirmation.png)
+
+
+## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
+
+Concernant cette première version de notre prototype, on charge nos données directement dans notre site.
+On ajoute aussi seulement la fonctionnalité principale qui est de trouver un covoiturage en rentrant le lieu de départ, la destination ainsi que la date.
+Pour celà nous avons nous allon avoir besoin de naviguer entre deux pages, la page d'accueil et la page de recherches, toutes deux vues par le client.
+
+
+### Page d'accueil
+
+Nous avons developpé un prototype de la page d'accueil (cf. Fig. 2)  pour qu'elle permette aux clients de faire une recherche. 
+
+
+![Prototype de la page d'accueil](doc/screenshot_frontpage_client.PNG)
+__Fig.5__: Prototype de la page d'accueil.
+
+Pour l'instant, nous avons essayé de faire une page d'accueil simple et minimaliste avec des élements de CSS basiques. Le but étant de passer à un framework plus puissant à la suite tout en essayant de garder un bon impact environnemental.
+
+Ainsi, contrairement à nos sites concurrents, nous avons opté pour une page sobre sans images, meme si elles peuvent attirer l'attention des covoitureurs mais elles ne sont pas obligatoires pour ce type de fonctionnalités. Nous avons décidé d'avoir une entete avec le nom et le logo de Blutt avec un conteneur contenant un formulaire pour les lieux de départ, d'arrivée ainsi que la date.
+
+|                       | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
+|-----------------------|----------|-------------|---------------|----------|------------------------|
+| Mode "développement"  |          |             |               |          |                        |
+| Mode "pré-production" |          |             |               |          |                        |
+
+__Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
+
+<span style="color:red">A remplir</span>
+
+### Page de recherche
+
+Concernant la page de recherche, nous avns ajouté quelques conteneurs contenant des informations sur plusieurs trajets.
+De meme que pour la page d'accueil, nous avons opté pour une implémentation sobre, avec le minimum de fonctionnalités possibles.
+Ainsi, chaque choix comporte le nom, prénom du covoitureur
+
+
+
+
