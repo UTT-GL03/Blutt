@@ -63,6 +63,7 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de deux s
 Ce sont deux solutions offrant des fonctionnalités similaires et qui ont la particularité de se vouloir des solutions simples et limitées en fonctionnalités contrairement à d'autres solutions plus populaires commme [BlaBlaCar](https://www.blablacar.fr) ou [Karos](https://www.karos.fr).
 
 Ainsi, voici les résultats obtenus:
+
 - [Résultats pour les deux scénarios](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Blutt/refs/heads/main/benchmark/result.html)
 
 ## Maquette de l'interface et échantillon de données
@@ -105,3 +106,20 @@ Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de
 
 ![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
 **Fig.6** : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
+
+## Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
+
+Pour la troisième version du prototype, les données sont désormais stockées dans un système de base de données interrogeable à travers une API Web (CouchDB). L'intérêt d'une source de données dynamique est d'une part, à terme, de pouvoir ajouter ou modifier des trajets en covoiturage plus facilement, et d'autre part de déporter sur le serveur le filtrage des données pertinentes (afin de réduire l'impact de notre service pour le client).
+
+Sur ce deuxième enjeu, on n'observe pas de changements significatifs en termes de consommation CPU et utilisation du réseau, cependant ces changements nous permettront dans le futur de faire de grosses économies de CO2 alors que l'application fait face à des quantités plus importantes de données.
+
+![an image of the greenframe interface showing the results for the carpool search of the v2 prototype of the Blutt website](/doc/greenframe_blutt_prototype2_carpool_search.png)
+![an image of the greenframe interfacec showing the results for the carpool search of the v3 prototype of the Blutt website](/doc/greenframe_blutt_prototype3_carpool_search.png)
+**Fig.7** : Comparaison de l'impact de la consultation de la page d'un article entre les prototypes 2 (en haut) et (3 en bas).
+
+On note cependant une augmentation de l'impact à cause de la présence nouvelle de la backend, qui semble faire une utilisation continue du CPU (utilisation continue certes mais qui reste néanmoins faible).
+
+![an image of the greenframe interface showing the results for the backend of the v3 prototyype of the Blutt website](/doc/greenframe_blutt_prototype3_backend.png)
+**Fig.8** : Profil dans le temps de l'impact de la base de données lors de la consultation de la page de recherche de covoiturage.
+
+De ces différentes mesures, nous pouvons retenir que l'effet de l'introduction d'une base de données, quoique négligeable, est, pour l'instant, plutôt défavorable d'un point de vue écologique. Le bilan de ce changement devrait cependant rapidement s'inverser avec l'augmentation de la quantité de données gérées, comme nous allons le voir avec le prototype n°4.
