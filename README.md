@@ -62,6 +62,9 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de deux s
 
 Ce sont deux solutions offrant des fonctionnalités similaires et qui ont la particularité de se vouloir des solutions simples et limitées en fonctionnalités contrairement à d'autres solutions plus populaires commme [BlaBlaCar](https://www.blablacar.fr) ou [Karos](https://www.karos.fr).
 
+Ainsi, voici les résultats obtenus:
+- [Résultats pour les deux scénarios](benchmark/result.html)
+
 ## Maquette de l'interface et échantillon de données
 
 Ainsi, en considérant les scénarios pris en compte dans l'étape précédante, nous avons décidé de créer des maquettes pour modéliser les pages de notre site et nous avons génerer un échantillon de données .
