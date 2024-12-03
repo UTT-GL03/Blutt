@@ -115,7 +115,7 @@ De meme que pour la page d'accueil, nous avons opté pour une implémentation so
 Ainsi, chaque choix comporte le nom, prénom du covoitureur, la date, le nombre de places disponibles ainsi que le prix.
 Nous n'avons pour l'instant pas inclu de filtrage que ce soit au niveau des destinations ou encore du prix, on affiche directement tous les résultats disponibles.
 
-![Prototype de la page de recherche](doc/screenshot_research_client.png)
+![Prototype de la page de recherche](doc/screenshot_research_client.PNG)
 __Fig.5__: Prototype de la page de recherche.
 
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
