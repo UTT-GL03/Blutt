@@ -63,13 +63,14 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de deux s
 Ce sont deux solutions offrant des fonctionnalités similaires et qui ont la particularité de se vouloir des solutions simples et limitées en fonctionnalités contrairement à d'autres solutions plus populaires commme [BlaBlaCar](https://www.blablacar.fr) ou [Karos](https://www.karos.fr).
 
 Ainsi, voici les résultats obtenus:
-- [Résultats pour les deux scénarios](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Blutt/refs/heads/main/benchmark/result.html)
 
+- [Résultats pour les deux scénarios](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Blutt/refs/heads/main/benchmark/result.html)
 
 ## Maquette de l'interface et échantillon de données
 
 Ainsi, en considérant les scénarios pris en compte dans l'étape précédante, nous avons décidé de créer des maquettes pour modéliser les pages de notre site et nous avons génerer un échantillon de données .
 Concernant les maquettes, nous avons modélisé 4 pages:
+
 1. La page d'accueil vue par un client
    ![Frontpage client](doc/frontpage_client.png)
 2. La page d'accueil vue par un conducteur
@@ -79,32 +80,29 @@ Concernant les maquettes, nous avons modélisé 4 pages:
 4. La page de confirmation vue par le conducteur
    ![Confirmation conducteur](doc/carpooler_confirmation.png)
 
-
 ## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
 
 Concernant cette première version de notre prototype, on charge nos données directement dans notre site.
 On ajoute aussi seulement la fonctionnalité principale qui est de trouver un covoiturage en rentrant le lieu de départ, la destination ainsi que la date.
 Pour celà nous avons nous allon avoir besoin de naviguer entre deux pages, la page d'accueil et la page de recherches, toutes deux vues par le client.
 
-
 ### Page d'accueil
 
-Nous avons developpé un prototype de la page d'accueil (cf. Fig. 2)  pour qu'elle permette aux clients de faire une recherche. 
-
+Nous avons developpé un prototype de la page d'accueil (cf. Fig. 2) pour qu'elle permette aux clients de faire une recherche.
 
 ![Prototype de la page d'accueil](doc/screenshot_frontpage_client.PNG)
-__Fig.5__: Prototype de la page d'accueil.
+**Fig.5**: Prototype de la page d'accueil.
 
 Pour l'instant, nous avons essayé de faire une page d'accueil simple et minimaliste avec des élements de CSS basiques. Le but étant de passer à un framework plus puissant à la suite tout en essayant de garder un bon impact environnemental.
 
 Ainsi, contrairement à nos sites concurrents, nous avons opté pour une page sobre sans images, meme si elles peuvent attirer l'attention des covoitureurs mais elles ne sont pas obligatoires pour ce type de fonctionnalités. Nous avons décidé d'avoir une entete avec le nom et le logo de Blutt avec un conteneur contenant un formulaire pour les lieux de départ, d'arrivée ainsi que la date.
 
 |                       | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
-|-----------------------|----------|-------------|---------------|----------|------------------------|
+| --------------------- | -------- | ----------- | ------------- | -------- | ---------------------- |
 | Mode "développement"  |          |             |               |          |                        |
 | Mode "pré-production" |          |             |               |          |                        |
 
-__Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
+**Tab.1**: Évaluation de l'impact du prototype de la page d'accueil.
 
 <span style="color:red">A remplir</span>
 
@@ -116,21 +114,42 @@ Ainsi, chaque choix comporte le nom, prénom du covoitureur, la date, le nombre 
 Nous n'avons pour l'instant pas inclu de filtrage que ce soit au niveau des destinations ou encore du prix, on affiche directement tous les résultats disponibles.
 
 ![Prototype de la page de recherche](doc/screenshot_research_client.PNG)
-__Fig.5__: Prototype de la page de recherche.
+**Fig.5**: Prototype de la page de recherche.
 
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
 
 |                                             | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
-|---------------------------------------------|----------|-------------|---------------|----------|------------------------|
+| ------------------------------------------- | -------- | ----------- | ------------- | -------- | ---------------------- |
 | 1. Chargement de la page                    |          |             |               |          |                        |
 | 2. Lancement de la recherche de covoiturage |          |             |               |          |                        |
 
-__Tab.2__: Évaluation de l'impact du scénario "Trpuver un covoiturage" dans le prototype n°1.
+**Tab.2**: Évaluation de l'impact du scénario "Trpuver un covoiturage" dans le prototype n°1.
 
 <span style="color:red">A remplir</span>
 
+## Prototype n°2 : fonctionnalités pour le scénario prioritaire avec données chargées de manière dynamique
 
+Pour cette deuxième version du prototype, les données (toujours statiques) sont désormais chargées par le frontend à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
 
+Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques. D'ailleurs, à partir de cette version, et à moins de changements profonds, l'EcoIndex ne devrait plus évoluer de manière significative. Nous utiliserons désormais un autre logiciel, GreenFrame, qui évalue non pas l'impact "environné" de la consultation (incorporant une participation au cycle de vie du terminal) mais celui de la consultation proprement dite (cf. Tab.3) et de manière beaucoup plus fiable à partir des statistiques d'utilisation des ressources physiques (CPU, mémoire, réseau, disque).
 
+|               | Impact de la page de publication de covoiturage | Impact de la consultation de la liste des covoiturages (trajet Troyes - Paris) |
+| ------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ |
+| La roue verte | 39mg                                            | 34mg                                                                           |
+| Mobicoop      | 62mg                                            | 46mg                                                                           |
+| **Blutt**     | 31mg                                            | 31mg                                                                           |
 
+**Tab.3** : Impact en mg CO2e de la consultation proprement dite des pages des services existants et de notre prototype.
 
+Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate un deuxième pic après le pic de chargement initial, qui est probablement dû au chargement de ressources externes post chargement initial. Ces ressources peuvent inclure des images, des pages supplémentaires ou bien des services externes tels que google analytics, cependant nous avons initialement choisi des services qui étaient déjà relativement légers, par conséquent le deuxième pic conserve tout de même des proportions raisonnables. On peut le voir avec comme exemple la page de création de covoiturage du site [Mobicoop](https://www.mobicoop.fr/covoiturage)
+
+![an image of the greenframe interface showing the results for the carpool search of the Mobicoop website.](/doc/greenframe_mobicoop_carpool_creation.png)
+**Fig.4** : Consommation de ressources lors de la consultation de [la page de création de covoiturage pour le site Mobicoop](https://www.mobicoop.fr/covoiturage/publierannonce).
+
+![an image of the greenframe interface showing the results for the carpool search of the Blutt website.](/doc/greenframe_blutt_carpool_creation.png)
+**Fig.5** : Consommation de ressources lors de la consultation de la page de création de covoiturage pour le site Blutt.
+
+Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un data center (cf. Fig.6). Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable (+2%, 0.5mg eq. CO2) par rapport à la partie "client" .
+
+![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
+**Fig.6** : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
