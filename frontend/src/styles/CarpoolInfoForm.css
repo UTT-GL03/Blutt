@@ -1,0 +1,24 @@
+input {
+  border-radius: 0.5rem;
+  flex: 1;
+  padding: 0.5rem;
+  margin: 1em 0;
+  border: none;
+}
+
+.form-client {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-direction: row;
+  align-content: center;
+}
+
+.input-container {
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+}
