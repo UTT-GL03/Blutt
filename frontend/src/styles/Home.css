@@ -1,112 +1,55 @@
 :root {
-    font: 1rem "Georgia",
+  font:
+    1rem "Georgia",
     serif;
 
-    /* Custom properties */
-    --background-color: white;
-    --accent-background: #95c590;
+  /* Custom properties */
+  --background-color: white;
+  --accent-background: #95c590;
+  --button-font-size: 1rem;
+  --button-vertical-padding: 0.5rem;
+  --button-horizontal-padding: 1rem;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/*
-.accueil_client {
-  width: 70%;
-  text-align: center;
-  background-color: #95c590;
-  margin: auto;
-
-  border-radius: 32px;
+input {
+  border-radius: 0.5rem;
+  flex: 1;
+  padding: 0.5rem;
+  margin: 1em 0;
+  border: none;
 }
-.form_client {
+
+h2 {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.home-container {
   display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--accent-background);
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.form-client {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 2rem;
+  padding: 0 2rem;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 7em 1em;
-}
-label {
-  width: 50%;
-  padding: 0;
-  margin: 1em 0;
-  justify-content: left;
-}
-input {
-  width: 100%;
-  padding: 0;
-  margin: 1em 0;
 }
 
-
-h2 {
-  font-size: 2em;
-  padding-top: 1em;
-}
-
-.switchbutton {
-  width: 25%;
-  margin: 5em;
-}
-
-.accueil_conducteur{
-  width:70%;
-  text-align:center;
-  background-color: #95c590;
-  margin: auto;
-  
-  border-radius: 32px;
-  
-  
-}
-.form_conducteur{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 20em 1em;
-}
-*/
-
-#root {
-    padding: 0 2rem;
-}
-
-.container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-:root {
-    --button-font-size: 1rem;
-    --button-vertical-padding: 0.5rem;
-    --button-horizontal-padding: 1rem;
-}
-
-h2 {
-    font-size: 2em;
-    padding-top: 1em;
-}
-
-label {
-    width: 50%;
-    padding: 0.5rem;
-    margin: 1em 0;
-    justify-content: left;
-    text-align: right;
-}
-
-input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 1em 0;
-    border-radius: 0.5rem;
-}
-
-.form_client {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 8em 1em;
+.input-container {
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
 }
