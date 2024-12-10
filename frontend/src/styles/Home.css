@@ -23,6 +23,7 @@ h2 {
 
 .home-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex: 1;
   background-color: var(--accent-background);
