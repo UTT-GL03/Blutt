@@ -1,20 +1,7 @@
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .carpool-container {
-  overflow-y: scroll;
-  scrollbar-width: none;
-  padding: 1rem;
-  gap: 0.5rem;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
-  border-radius: 2rem;
-  flex: 1;
-  background-color: var(--accent-background);
+  gap: 1rem;
 }
 
 .carpool-entry-container {
@@ -40,6 +27,7 @@
   padding: 2rem;
   background-color: black;
   color: white;
+  border: none;
 }
 
 .name {
@@ -60,7 +48,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 2rem 0;
   gap: 2rem;
   flex-direction: row;
   font-size: 1.5rem;
