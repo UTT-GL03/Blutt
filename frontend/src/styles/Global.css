@@ -14,6 +14,7 @@
 
 .button {
     color: white;
+    align-self: center;
     background-color: green;
     padding: var(--button-vertical-padding) var(--button-horizontal-padding);
     margin: var(--button-vertical-margin) 0;

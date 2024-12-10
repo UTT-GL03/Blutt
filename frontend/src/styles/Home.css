@@ -16,17 +16,9 @@
   padding: 0;
 }
 
-input {
-  border-radius: 0.5rem;
-  flex: 1;
-  padding: 0.5rem;
-  margin: 1em 0;
-  border: none;
-}
-
 h2 {
   font-size: 2rem;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .home-container {
@@ -36,20 +28,4 @@ h2 {
   background-color: var(--accent-background);
   text-align: center;
   border-radius: 2rem;
-}
-
-.form-client {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  gap: 2rem;
-  padding: 0 2rem;
-  flex-direction: row;
-}
-
-.input-container {
-  flex: 1;
-  align-items: center;
-  gap: 0.5rem;
-  display: flex;
 }
