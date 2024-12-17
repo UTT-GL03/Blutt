@@ -13,16 +13,21 @@
 }
 
 .button {
-    color: white;
-    align-self: center;
-    background-color: green;
-    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
-    margin: var(--button-vertical-margin) 0;
-    font-size: var(--button-font-size);
-    border-radius: calc(
-            var(--button-font-size) + 2 * var(--button-vertical-padding)
-    );
-    border: none;
-    cursor: pointer;
-    font-weight: bolder;
+  color: white;
+  align-self: center;
+  background-color: green;
+  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+  margin: var(--button-vertical-margin) 0;
+  font-size: var(--button-font-size);
+  border-radius: calc(
+    var(--button-font-size) + 2 * var(--button-vertical-padding)
+  );
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.button:disabled {
+  color: grey;
+  background-color: lightgray;
 }

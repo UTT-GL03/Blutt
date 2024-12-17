@@ -1,7 +1,21 @@
+.container {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+}
+
 .carpool-container {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 1rem;
+}
+
+.center-text {
+  flex: 1;
+  font-weight: bold;
+  text-align: center;
+  align-content: center;
 }
 
 .carpool-entry-container {

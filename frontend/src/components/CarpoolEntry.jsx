@@ -1,7 +1,7 @@
 import "../styles/CarpoolSearch.css";
 
 export default function CarpoolEntry({ carpool }) {
-  const date = new Date(carpool.date);
+  const date = new Date(carpool.date * 1000);
   const formattedDate = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
   const formattedHour = `${date.getHours()}:${date.getMinutes()}`;
 
