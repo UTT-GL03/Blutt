@@ -1,0 +1,7 @@
+{
+  "index": {
+    "fields": ["from", "to", { "date": "asc" }]
+  },
+  "name": "carpool_search_index",
+  "type": "json"
+}
