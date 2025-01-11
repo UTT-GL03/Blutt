@@ -98,13 +98,13 @@ Pour l'instant, nous avons essayé de faire une page d'accueil simple et minimal
 Ainsi, contrairement à nos sites concurrents, nous avons opté pour une page sobre sans images, meme si elles peuvent attirer l'attention des covoitureurs mais elles ne sont pas obligatoires pour ce type de fonctionnalités. Nous avons décidé d'avoir une entete avec le nom et le logo de Blutt avec un conteneur contenant un formulaire pour les lieux de départ, d'arrivée ainsi que la date.
 
 |                       | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
-| --------------------- | -------- | ----------- | ------------- | -------- | ---------------------- |
-| Mode "développement"  |          |             |               |          |                        |
-| Mode "pré-production" |          |             |               |          |                        |
+|-----------------------|----------|-------------|---------------|----------|------------------------|
+| Mode "développement"  | 90 A🟢         |    1,1         |    120           |   8       |             234   |
+| Mode "pré-production" |  95 A🟢        |    1,0         |   100            |     5     |     43                 |
 
 **Tab.1**: Évaluation de l'impact du prototype de la page d'accueil.
 
-<span style="color:red">A remplir</span>
+On remarque donc bien que notre page d'accueil pour l'instant permet de maintenir une empreinte environnementale minimale tout en offrant une interface fonctionnelle et intuitive.
 
 ### Page de recherche
 
@@ -119,13 +119,15 @@ Nous n'avons pour l'instant pas inclu de filtrage que ce soit au niveau des dest
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
 
 |                                             | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
-| ------------------------------------------- | -------- | ----------- | ------------- | -------- | ---------------------- |
-| 1. Chargement de la page                    |          |             |               |          |                        |
-| 2. Lancement de la recherche de covoiturage |          |             |               |          |                        |
+|---------------------------------------------|----------|-------------|---------------|----------|------------------------|
+| 1. Chargement de la page                    |      92 A🟢    |   1,0          |       200       |       10   |            78          |
+| 2. Lancement de la recherche de covoiturage |    88 A🟢      |        1,1     |        300       |    15      |       78                 |
 
-**Tab.2**: Évaluation de l'impact du scénario "Trpuver un covoiturage" dans le prototype n°1.
+__Tab.2__: Évaluation de l'impact du scénario "Trpuver un covoiturage" dans le prototype n°1.
 
-<span style="color:red">A remplir</span>
+Ces résultats démontrent que le prototype actuel permet d'accomplir les étapes clés du scénario prioritaire tout en maintenant une empreinte environnementale très faible comparée à celle retrouvée dans les sites concurrents. 
+L'objectif pour les prototypes suivants reste d'essayer d'augmenter le minimum possible cet impact avec l'ajout de données réelles.
+
 
 ## Prototype n°2 : fonctionnalités pour le scénario prioritaire avec données chargées de manière dynamique
 
