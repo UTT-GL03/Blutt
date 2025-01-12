@@ -398,3 +398,5 @@ impact environnemental.
 ![an image of the greenframe interface showing the results for the static hosting of the Blutt website.](/doc/greeenframe_blutt_static_hosting.png)
 **Fig.13** : Consommation de ressources par le serveur Web lors de la
 consultation de la page des titres dans notre prototype.
+
+Si l'on considère les mesures greenframe effectuées, on se rend compte que l'écran du périphérique représente la majorité de l'impact environnemental de l'utilisation de notre application. Cela veut concrètement dire que l'on aura beau implémenter des optimisations afin de réduire le trafic réseau et l'utilisation CPU, le temps d'affichage à l'écran restera déterminant dans la consommation totale. Sachant cela en tant que développeur, notre but sera donc d'essayer de minimiser le temps passé par l'utilisateur sur l'application, tout en essayant de rester en accord avec un éventuel modèle d'affaires.
