@@ -287,12 +287,6 @@ importantes de données.
 **Fig.5** : Consommation de ressources lors de la consultation de la page de
 création de covoiturage pour le site Blutt.
 
-Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la
-partie "serveur", possiblement hébergée par un data center (cf. Fig.6). Réduite
-au simple hébergement de données statiques sur un serveur Web, cette partie a
-pour l'instant un impact très faible et quasi négligeable (2% de la consommation
-totale).
-
 ![an image of the greenframe interface showing the results for the backend of the v3 prototype of the Blutt website](/doc/greenframe_blutt_prototype3_backend.png)
 **Fig.8** : Profil dans le temps de l'impact de la base de données lors de la
 consultation de la page de recherche de covoiturage.
